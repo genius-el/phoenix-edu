@@ -1,0 +1,110 @@
+/* Page Styling */
+/* Reset some default styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Body Styling */
+body {
+  background-color: white;
+  color: black;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+  color: black;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.media-list {
+  background-color: #007bff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 50px;
+  height: 70px;
+}
+
+.media-list li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.media-list li a {
+  color: white;
+  text-decoration: none;
+}
+
+.header {
+  background-color: white;
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+}
+.nav-list a {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.nav-list ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url("images/greektemple.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  text-align: center;
+  font-weight: 800;
+}
+
+/* About Section */
+.founder {
+    display: flex;
+}
