@@ -64,7 +64,19 @@ a:hover {
   padding-right: 40px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   flex-direction: row;
+  height: 100px;
+}
+
+.login-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
 }
 
 .nav-list {
@@ -72,6 +84,8 @@ a:hover {
   justify-content: center;
   align-items: center;
   height: 70px;
+  font-weight: bolder;
+  font-size: 1.5em;
 }
 .nav-list a {
   color: black;
@@ -91,6 +105,7 @@ a:hover {
 
 /* Hero Section */
 .hero {
+  position: relative;
   background-image: url("images/greektemple.jpg");
   background-size: cover;
   background-position: center;
@@ -104,7 +119,195 @@ a:hover {
   font-weight: 800;
 }
 
-/* About Section */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0; /* Ensure the overlay is above the background image */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Semi-transparent white overlay */
+}
+
+.hero > * {
+  position: relative; /* Ensure content is above the overlay */
+  z-index: 1; /* Bring content above the overlay */
+}
+
+.hero-content {
+  padding: 50px;
+  border-radius: 10px;
+  font-size: 1.5em;
+  color: black;
+}
+
+.explore-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+
+/* Welcome Section */
+.welcome {
+  background-color: #f8f9fa;
+  padding: 100px;
+  /* text-align: center; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 60px;
+  font-size: larger;
+  font-weight: 700;
+}
+
 .founder {
-    display: flex;
+  background-color: #f8f9fa;
+  /* padding: 50px; */
+  text-align: center;
+  font-size: larger;
+  font-weight: 700;
+}
+
+.founder img {
+  width: 500px;
+  height: auto;
+  /* border-radius: 50%; */
+}
+
+.welcome-text {
+  max-width: 1000px;
+  padding: 20px;
+  margin-left: 90px;
+}
+
+.welcome-text h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.welcome-text h3 {
+  font-size: 1.2em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  color: rgb(192, 26, 26);
+}
+
+.welcome-text p {
+  font-size: 1.2em;
+  line-height: 1.6;
+  /* margin-bottom: 20px; */
+  text-align: justify;
+}
+
+.enrol {
+  background-image: url("images/greektemple2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: center;
+  height: 50vh;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.services {
+  background-color: #f8f9fa;
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 60px;
+}
+
+.service-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 90px;
+  margin-top: -300px;
+}
+
+.service-cards h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.web-dev,
+.game-dev,
+.graphic-design {
+  margin: 40px;
+}
+
+.why-choose-us {
+  background-color: #f8f9fa;
+  padding: 50px;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.why-choose-us-header {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  margin-left: 0px;
+  padding-left: 0px;
+  width: 800px;
+}
+
+.reasons {
+  font-size: 1.5em;
+  width: 800px;
+}
+
+.learn-more-button {
+  background-color: rgb(190, 28, 28);
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+}
+
+.footer-content {
+  background-color: lightblue;
+  padding: 20px;
+  display: flex;
+}
+
+.footer-links.list {
+  list-style-type: none;
+}
+
+.all-rights {
+  margin: 0;
+  text-align: center;
+  font-size: 1.2em;
+  background-color: lightblue;
 }
