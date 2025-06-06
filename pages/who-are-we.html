@@ -1,0 +1,290 @@
+<!-- The Who are we Page -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Phoenix Edu | Who Are We</title>
+
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                line-height: 1.6;
+                color:black;
+                background-color:blanchedalmond;
+            }
+
+            .header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 20px;
+                background-color:rgb(1, 28, 39);
+                color: white;
+            }
+
+            .logo img {
+                width: 50px;
+                height: 50px;
+            }
+
+            .nav-list {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                margin-right: 100px;
+            }
+
+            .nav-list ul {
+                list-style: none;
+                display: flex;
+                gap: 20px;
+            }
+
+            .nav-list ul li {
+                display: inline;
+            }
+
+            .nav-list ul li a {
+                color: white;
+                text-decoration: none;
+            }
+
+            .nav-list ul li a:hover {
+                text-decoration:solid underline;
+            }
+
+            .login-button {
+                background-color: orange;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+
+            .login-button:hover {
+                background-color: darkorange
+            }
+
+            .hero {
+                position: relative;
+                background-image: url('../images/greektemple2.jpg');
+                background-size: cover;
+                background-position: center;
+                background-repeat:no-repeat;
+                height: 400px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                text-align: center;
+                font-size: 2em;
+                margin-bottom: 80px;
+
+            }
+
+            .hero::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+                z-index: 0;
+            }
+
+            .hero > * {
+                position: relative;
+                z-index: 1;
+            }
+
+            .About-description {
+                text-align: center;
+                color: white;
+                font-size: 1.5em;
+            }
+
+            .body {
+                padding: 20px;
+                max-width: 1800px;
+                margin: 0 auto;
+                display: flex;
+                gap: 80px;
+                justify-content: center;
+
+
+            }
+
+            .About-description, .About-text, .About-mission .our-difference, .target-audience, .vision {
+                margin-bottom : 20px;
+            }
+
+            .About-text h2, .About-mission h2, .our-difference h2, .target-audience h2, .vision h2 {
+                color: rgb(1, 28, 39);
+                font-size: 1.8em;
+                margin-bottom: 15px;
+            }
+
+            .About-text, .About-mission p, .our-difference p, .target-audience li, .vision p {
+                font-size: 1.2em;
+                line-height: 1.6em;
+                color: black;
+            }
+
+            .our-difference ul, .target-audience ul {
+                list-style-type: disc;
+                padding-left: 20px;
+            }
+
+            .footer-content {
+                background-color:rgb(1, 28, 39);
+                padding: 20px;
+                display: flex;
+            }
+
+            .footer-links.list {
+                list-style-type: none;
+            }
+
+            .all-rights {
+                margin: 0;
+                text-align: center;
+                font-size: 1.2em;
+                background-color:rgb(1, 28, 39);
+            }
+
+
+
+        </style>
+
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header class="header">
+            <div class="logo">
+                <img src="../images/phoenix_logo.png" alt="Phoenix Edu Logo" width="50px" height="50px" />
+            </div>
+            <nav class="nav-list">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="#">Who Are We</a></li>
+                    <li><a href="../gallery.html">Gallery</a></li>
+                    <li><a href="../contact.html">Contact</a></li>
+                </ul>
+                <button class="login-button">Login</button>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="About-description">
+                <h1>About Phoenix Edu</h1> 
+            </div>
+        </section>
+        
+        <!-- body section -->
+         <section class="body">
+            <div class="body-first-section">
+                <div class="About-text">
+                    <h2>Reignite Your Potential. Reimagine Your Future.</h2>
+                    <p>
+                        At Phoenix Edu, we believe every individual has the power to rise, grow, and lead—just like the mythical phoenix that emerges stronger from the flames. We exist to awaken that power within you through transformative education built for the realities of today and the demands of tomorrow.
+                    </p>
+
+                    <p>
+                        Phoenix Edu is not just another online learning platform. We are a bold movement, a digital campus where creators, thinkers, and future culture-shapers come to gain mastery in the world’s most valuable skills—web development, graphic design, game development, digital tools, and beyond.
+                    </p>
+
+                    <p>
+                        Whether you're starting from scratch or aiming to level up, Phoenix Edu gives you more than knowledge—we empower you with clarity, competence, and confidence.
+                    </p>
+                </div>
+
+                <div class="our-difference">
+                    <h2>What makes us different</h2>
+                    <ul>
+                        <li>High-Impact, Skill-Based Learning</li>
+                            <p>We focus on practical, industry-relevant skills that can be applied immediately—no fluff, just real growth.</p>
+                        <li>Experienced Mentors, Not Just Instructors</li>
+                            <p>Our educators are more than teachers—they’re practitioners and pioneers in their fields, guiding you through hands-on projects, real-world challenges, and portfolio-ready results.</p>
+                        <li>Innovation-Centered Curriculum</li>
+                            <p>The world changes fast. Our curriculum evolves faster. Every course is designed to align with the latest technologies, trends, and tools, so you're always ahead of the curve.</p>
+                        <li>Community-Driven Growth</li>
+                            <p>Learning doesn’t happen in isolation. At Phoenix Edu, you're plugged into a supportive and ambitious community of learners, mentors, and creatives—here to share, support, and grow with you.</p>
+                        <li>Mindset + Skillset</li>
+                            <p>
+                                Technical skills are crucial, but thinking critically, solving creatively, and leading courageously—these are the values we build into every lesson. We don’t just teach what to do; we explore why and how.
+                            </p>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="body-second-section">
+                <div class="About-mission">
+                    <h2>Our Mission</h2>
+                    <p>
+                        To equip individuals with high-value digital skills while cultivating the mindset of a critical thinker, creative problem solver, and intentional culture builder.
+                    </p>
+                    <p>
+                        We’re on a mission to turn learners into leaders—people who don’t just survive the digital age, but shape it.
+                    </p>
+                </div>
+
+                <div class="vision">
+                    <h2>Our Vision</h2>
+                    <p>
+                        We see a world where education doesn’t limit potential—it amplifies it. Where learning is no longer about memorizing information, but about mastering skills, shaping perspectives, and building things that matter.
+                    </p>
+                    <p>
+                        Phoenix Edu exists to nurture a new kind of learner: capable, courageous, and culturally aware. A generation of builders who ask better questions, offer better solutions, and lead with clarity.
+                    </p>
+                </div>
+
+                <div class="target-audience">
+                    <h2>Who is this for?</h2>
+                    <ul>
+                        <li>Aspiring developers and designers seeking real skill mastery</li>
+                        <li>University students or recent grads who feel stuck and want direction</li>
+                        <li>Creatives, builders, and thinkers who want to impact culture through tech</li>
+                        <li>Anyone ready to stop consuming and start creating</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <section class="footer-content">
+                <div class="footer-logo">
+                <img
+                    src="images/phoenix_logo.png"
+                    alt="Phoenix Edu Logo"
+                    width="100px"
+                    height="100px"
+                />
+                </div>
+                <div class="footer-links">
+                <ul class="footer-links list">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+                </div>
+                <div class="footer-socials">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+                </div>
+            </section>
+            <p class="all-rights">&copy; 2023 Phoenix Edu. All rights reserved.</p>
+        </footer>
+    </body>
+</html>
