@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phoenix Edu | Contact</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        body {
+            font-family:Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #333; /* Default text color */
+            background-color: blanchedalmond; /* Default background color */
+            
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color:rgb(1, 28, 39);
+            color: white;
+        }
+
+        .logo img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .nav-list {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-right: 50px;
+        }
+
+        .nav-list ul {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-list ul li {
+            display: inline;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .nav-list ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .nav-list ul li a:hover {
+            text-decoration: solid underline;
+        }
+
+        .login-button {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .login-button:hover {
+            background-color: darkorange;
+        }
+
+        .hero {
+            position: relative;
+            background-image: url('../images/web-dev2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-weight: bold;
+            height: 600px;;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            font-size: 1.2em;
+            margin-bottom: 80px;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+            z-index: 0; /* Ensure the overlay is above the background image */
+        }
+
+        .hero > * {
+            position: relative; /* Ensure text is above the overlay */
+            z-index: 1; /* Bring text above the overlay */
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            max-width: 800px;
+        }
+
+        .contact-details {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background-color: #f8f9fa;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 1200px;
+        }
+
+        .contact-details h3 {
+            margin-bottom: 10px;
+        }
+
+        .contact-details ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-details ul li {
+            margin-bottom: 5px;
+        }
+
+        .contact-info,
+        .office-hours {
+            flex: 1;
+            margin: 0 10px;
+            background-color:grey;
+            padding: 20px;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            line-height: 1.6em;
+        }
+
+        .contact-form {
+            max-width: 600px;
+            margin:  0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: black;
+            font-size: 1.2em;
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .contact-form h3 {
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        .contact-form .form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form label {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1em;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s ease;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+
+        .contact-form button {
+            background-color: orange;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form button:hover {
+            background-color: darkorange;
+        }
+
+        .faqs {
+            /* max-width: 800px; */
+            /* margin: 0 auto; */
+            margin-top: 40px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: black;
+            font-size: 1.2em;
+
+        }
+
+        .faqs h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .faqs h3 {
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: normal;
+        }
+
+        .faqs ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .faqs li {
+            margin-bottom: 15px;
+        }
+
+        .faqs li strong {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .stay-connected {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            color: black;
+            font-size: 1.2em;
+        }
+
+        .stay-connected h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .stay-connected p {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .stay-connected ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        .stay-connected ul li {
+            margin-bottom: 10px;
+        }
+
+        .stay-connected ul li a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .stay-connected ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-content {
+                background-color:rgb(1, 28, 39);
+                padding: 20px;
+                display: flex;
+            }
+
+            .footer-links.list {
+                list-style-type: none;
+            }
+
+            .all-rights {
+                margin: 0;
+                text-align: center;
+                font-size: 1.2em;
+                background-color:rgb(1, 28, 39);
+            }
+
+
+
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="logo">
+        <img
+          src="../images/phoenix_logo.png"
+          alt="Phoenix Edu Logo"
+          width="50px"
+          height="50px"
+        />
+      </div>
+      <nav class="nav-list">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./who-are-we.html">Who Are We</a></li>
+          <li><a href="./courses.html">Courses</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+        <button class="login-button">Login</button>
+      </nav>
+    </header>
+    <!-- Hero -->
+    <section class="hero">
+      <h1>Phoenix Edu | Contact Us</h1>
+      <h2>Let's Build Something Great Together</h2>
+      <p>
+        Got a question, idea, partnership request. or just want to say hi? We'd
+        love to hear from you.
+      </p>
+      <p>
+        At Phoenix Edu, connection is core to our mission. Whether you're a
+        learner, mentor, collaborator, or supporter, your voice matters here.
+      </p>
+      <p>Reach out and we’ll get back to you as soon as the code compiles.</p>
+    </section>
+
+    <!-- General Details -->
+    <section class="contact-details">
+        <div class="contact-info">
+            <h3>General Inquiries:</h3>
+            <ul>
+                <li><a href="#">phoenixedu.com</a></li>
+                <li>+234 9067994587</li>
+                <li>Osun State, Nigeria (Remote-friendly)</li>
+            </ul>
+        </div>
+
+        <div class="office-hours">
+            <h3>Office Hours:</h3>
+            <ul>
+                <li>Monday to Friday: 9 AM - 5 PM WAT</li>
+                <li>Saturday: 10 AM - 2 PM WAT</li>
+                <li>Sunday: Closed</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="contact-form">
+      <h2>Send Us a Message</h2>
+      <h3>
+        You can also fill out the form below and our team will get back to you
+        within 24-48 hours.
+      </h3>
+      <form action="#" method="POST" class="form">
+        <label for="name">Full Name</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          placeholder="Enter your full name"
+        />
+
+        <label for="email">Email Address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="Enter your email address"
+        />
+
+        <label for="subject">Your Message</label>
+        <input type="text" id="subject" name="subject" />
+
+        <label for="message">Your Message</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          required
+          placeholder
+        ></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- FAQs Section -->
+    <section class="faqs">
+      <h2>Frequently Asked Questions</h2>
+      <h3>Have a question? Check our FAQs below:</h3>
+      <ul>
+        <li>
+          <strong>What courses do you offer?</strong> We offer a range of
+          courses in web development, data science, and more. Check our
+          <a href="./courses.html">Courses</a> page for details.
+        </li>
+        <li>
+          <strong>How can I enroll in a course?</strong> You can enroll directly
+          through our website. Visit the course page and follow the enrollment
+          instructions.
+        </li>
+        <li>
+          <strong>Can I collaborate with Phoenix Edu?</strong> Absolutely! We
+          welcome partnerships and collaborations. Please reach out via our
+          contact form.
+        </li>
+      </ul>
+    </section>
+
+    <!-- Lets stay connected -->
+    <section class="stay-connected">
+      <h2>Let's Stay Connected</h2>
+      <p>
+        Follow us on social media for updates, resources, and community
+        engagement:
+      </p>
+      <ul>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">LinkedIn</a></li>
+      </ul>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <section class="footer-content">
+        <div class="footer-logo">
+          <img
+            src="../images/phoenix_logo.png"
+            alt="Phoenix Edu Logo"
+            width="100px"
+            height="100px"
+          />
+        </div>
+        <div class="footer-links">
+          <ul class="footer-links list">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Contact Us</a></li>
+          </ul>
+        </div>
+      </section>
+      <p class="all-rights">&copy; 2023 Phoenix Edu. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
