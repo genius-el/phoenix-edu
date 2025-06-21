@@ -90,7 +90,7 @@
             flex-direction: column;
             align-items: center;
             font-weight: bold;
-            height: 600px;;
+            height: 600px;
             color: white;
             text-align: center;
             padding: 100px 20px;
@@ -129,16 +129,39 @@
             font-size: 1.2em;
         }
 
-        .courses-section {
-            padding: 20px;
+        @media (max-width: 768px) {
+            .hero {
+                padding: 50px 20px;
+                height: auto; /* Allow height to adjust based on content */
+            }
+
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero h2 {
+                font-size: 1.5em;
+            }
+
+            .hero p {
+                font-size: 1em;
+                padding: 0 20px; /* Add padding for smaller screens */
+            }
+
+            
         }
+
+        /* .courses-section {
+            padding: 20px;
+        } */
 
         .course-list {
             display: flex;
             gap: 80px;
             max-width: 1500px;
             margin: 0 auto;
-            justify-content: space-between;  
+            justify-content: space-between;
+            padding: 20px;  
             /* flex-wrap: wrap; */
 
         }

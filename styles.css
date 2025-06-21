@@ -178,12 +178,12 @@ a:hover {
 /* Welcome Section */
 .welcome {
   background-color: #f8f9fa;
-  padding: 100px;
-  /* text-align: center; */
+  padding: 80px 40px;
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  /* align-items: center; */
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
   gap: 60px;
   font-size: larger;
   font-weight: 700;
@@ -191,50 +191,86 @@ a:hover {
 
 .founder {
   background-color: #f8f9fa;
-  height: 50px;
-  background-color: blanchedalmond;
-  /* padding: 50px; */
+  flex: 1 1 300px; /* grow, shrink, base width */
+  height: 100vh;
+  /* background-color: blanchedalmond; */
   text-align: center;
   font-size: larger;
   font-weight: 700;
 }
 
 .founder img {
-  width: 500px;
-  height: 500px;
-  /* border-radius: 50%; */
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  /* align-self: center; */
 }
 
+
 .welcome-text {
-  max-width: 1000px;
+  flex: 1 1 400px; /* grow, shrink, base width */
+  max-width: 600px;
   padding: 20px;
-  margin-left: 90px;
+  text-align: left;
+  font-size: 1em;
+
 }
 
 .welcome-text h2 {
-  font-size: 2.5em;
-  margin-bottom: 20px;
+  font-size: 2.2em;
+  margin-bottom: 15px;
 }
 
 .welcome-text h3 {
-  font-size: 1.2em;
+  font-size: 1.3em;
   line-height: 1.6;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   color: rgb(192, 26, 26);
 }
 
 .welcome-text p {
-  font-size: 1.2em;
+  font-size: 1.1em;
   line-height: 1.6;
-  /* margin-bottom: 20px; */
   text-align: justify;
 }
 
+@media (max-width: 768px) {
+  .welcome {
+    flex-direction: column;
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .founder img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+  }
+
+  .welcome-text {
+    margin-left: 0;
+    margin-top: 85px;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1024px) {
+  .welcome {
+    padding: 60px 30px;
+  }
+
+  .welcome-text {
+    margin-left: 0;
+  }
+}
+
 .enrol {
+  position: relative;
   background-image: url("images/greektemple2.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: center;
+  background-repeat: no-repeat;
   height: 50vh;
   color: white;
   padding: 20px;
@@ -244,16 +280,53 @@ a:hover {
   flex-direction: column;
   /* justify-content: center; */
   align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.enrol::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0; /* Ensure the overlay is below the content */
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+}
+
+.enrol > * {
+  position: relative; /* Ensure content is above the overlay */
+  z-index: 1; /* Bring content above the overlay */
+}
+
+.enrol h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.enrol > button {
+  background-color: orange;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
 }
 
 .services {
   background-color: blanchedalmond;
-  padding: 50px;
+  padding: 50px 20px;
   text-align: center;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  flex-direction: row;;
   gap: 60px;
 }
 
@@ -261,11 +334,13 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 40px;
   align-items: center;
   flex-direction: row;
-  margin-left: 90px;
-  margin-top: -300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  max-width: 1200px;
 }
 
 .service-cards h3 {
@@ -273,6 +348,27 @@ a:hover {
   margin-bottom: 10px;
   color: white;
 }
+
+.service-cards > div {
+  background-color: rgb(1, 28, 39);
+  padding: 20px;
+  border-radius: 10px;
+  flex: 1 1 300px; /* grow, shrink, base width */
+  max-width: 350px;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.service-cards > div:hover {
+  transform: scale(1.05);
+}
+
+.service-cards img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+
 
 .web-dev,
 .game-dev,
